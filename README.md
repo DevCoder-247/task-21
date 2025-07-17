@@ -1,3 +1,6 @@
+## FeontEnd link 
+- https://lucky-mochi-d927cf.netlify.app/
+
 This project focuses on building a React-based online shoe store with a functional shopping cart system powered by the useState hook. The main goal was to manage cart interactions on the client side in a clean, responsive, and intuitive manner. The following design decisions were made to structure and enhance the application:
 
 Component-Based Structure
