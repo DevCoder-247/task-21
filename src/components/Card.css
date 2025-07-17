@@ -1,0 +1,54 @@
+/* Card.css */
+.card {
+    display: inline-block;
+    width: 300px;
+    margin: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .card-border {
+    position: relative;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #000;
+    overflow: hidden;
+    transition: border-color 0.5s;
+    border: 4px solid;
+    border-image-slice: 1;
+    border-image-source: linear-gradient(270deg, #ff7b7b, #85ffbd, #ff7b7b);
+    animation: borderColorChange 5s linear infinite;
+  }
+  
+  @keyframes borderColorChange {
+    0% {
+      border-image-source: linear-gradient(270deg, #ff7b7b, #85ffbd, #ff7b7b);
+    }
+    50% {
+      border-image-source: linear-gradient(270deg, #7b85ff, #ff85ff, #7b85ff);
+    }
+    100% {
+      border-image-source: linear-gradient(270deg, #ff7b7b, #85ffbd, #ff7b7b);
+    }
+  }
+  
+  .card-image {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .card-title {
+    /* color: #b3b3ff; */
+    color: white;
+    text-align: center;
+    margin: 10px 0 5px;
+  }
+  
+  .card-description {
+    color: #b3b3ff;
+    text-align: center;
+  }
+  
