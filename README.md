@@ -1,29 +1,30 @@
 ## FeontEnd link 
 - https://lucky-mochi-d927cf.netlify.app/
 
-This project focuses on building a React-based online shoe store with a functional shopping cart system powered by the useState hook. The main goal was to manage cart interactions on the client side in a clean, responsive, and intuitive manner. The following design decisions were made to structure and enhance the application:
+1. **Component-Based Architecture**
+   The app follows React's best practice of breaking down UI into reusable components. A separate `Card` component is created (`Card.jsx`) which receives `title`, `description`, and `image` as props. This improves reusability and code modularity, making it easy to manage and scale the UI.
 
-Component-Based Structure
-The application is broken down into key components:
+2. **Data-Driven Rendering**
+   The main `App.jsx` file stores an array of objects, each representing a card. Instead of hardcoding each card, the `map()` function is used to loop through the array and render cards dynamically. This avoids duplication, supports scalability, and keeps the UI in sync with the data.
 
-A ShoeList to display available shoes
+3. **CSS Separation and Styling**
+   Styling is cleanly split into two separate CSS files:
 
-A Cart to show selected items
+* `Card.css` – for styling individual cards
+* `App.css` – for global or layout-related styles
+  This improves separation of concerns, allowing each component to manage its own styling independently. Easier to debug and modify styles in the future.
 
-Reusable ShoeCard and CartItem components for clarity and modularity
-This separation helps keep UI logic manageable and maintainable.
+4. **Media and Accessibility**
+   Images are pulled from Pexels using external URLs. The `alt` attribute in the `<img>` tag is dynamically set using the card’s title. This enhances accessibility and ensures the app is more inclusive for screen readers and search engines.
 
-State Management with useState
-Cart state is maintained using React’s useState hook within a parent component. This allows real-time updates to the UI whenever an item is added or removed. Each interaction updates the cart's array of items and triggers a re-render.
+5. **Semantic HTML and Content Structure**
+   The app uses proper semantic tags:
 
-Add to Cart Functionality
-When users click “Add to Cart,” the item is either added fresh or, if it already exists, its quantity is incremented. This logic ensures no duplicates while accurately tracking quantity.
+* `<h2>` for the main title
+* `<h3>` for card titles
+* `<p>` for card descriptions
+  This ensures better readability, SEO, and accessibility.
 
-Remove from Cart and Quantity Handling
-Users can remove an item or decrease its quantity. If the quantity reaches zero, the item is removed from the cart entirely. This keeps the cart clean and avoids unnecessary state clutter.
+6. **Visual Consistency and Layout**
+   Each card is wrapped in a `.card` and `.card-border` class for layout and visual styling. Though CSS isn't shown here, the class structure implies use of a grid or flexbox layout for aligning cards properly within `.card-container`. This ensures the design looks clean, structured, and likely responsive.
 
-Live Cart Total Calculation
-The total cost of the cart is dynamically calculated based on current cart items and their quantities. This ensures that the displayed total always reflects the real-time cart state.
-
-Responsive Layout and Visual Clarity
-The UI is organized with the shoe collection displayed on the left and the cart on the right. This clear two-column layout offers a seamless browsing and cart-management experience.
