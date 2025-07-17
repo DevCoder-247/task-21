@@ -1,5 +1,5 @@
 ## FeontEnd link 
-- https://lucky-mochi-d927cf.netlify.app/
+- [https://hilarious-cupcake-945a99.netlify.app/](https://hilarious-cupcake-945a99.netlify.app/)
 
 1. **Component-Based Architecture**
    The app follows React's best practice of breaking down UI into reusable components. A separate `Card` component is created (`Card.jsx`) which receives `title`, `description`, and `image` as props. This improves reusability and code modularity, making it easy to manage and scale the UI.
